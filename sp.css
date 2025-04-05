@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    width: 340px;
+    background: green;
+    border: 1px solid #ddd;
+    padding: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mục cha */
+.menu-item {
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Mục con ẩn mặc định */
+.submenu {
+    display: none;
+    padding-left: 15px;
+}
+
+.submenu li {
+    list-style: none;
+    padding: 8px 0;
+    font-weight: normal;
+    color: #555;
+    cursor: pointer;
+}
+
+/* Khi mở menu con */
+.submenu.active {
+    display: block;
+}
+
+/* Biểu tượng mũi tên */
+.toggle-btn {
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+/* Khi mở, xoay mũi tên */
+.toggle-btn.rotate {
+    transform: rotate(180deg);
+}
+iframe {
+    width: 100%;
+    height: 90vh;
+    border: none;
+}

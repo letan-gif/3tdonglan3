@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Gấp Gọn</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sp.css">
+    
+
+
+</head>
+
+<body>
+    <div class="header-top">
+        <div class="hotline">📞 Hotline: 0933 843 247</div>
+        <a href="lienHe.html">📍 Liên Hệ</a>
+    </div>
+
+    <div class="header-main">
+        <div class="logo">
+            <img src="3Tlogo.jpg" alt="Thực phẩm 3T" class="rounded-img">
+
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Tìm tên sản phẩm">
+            <button>🔍</button>
+        </div>
+
+        <div class="menu">
+            <a style="color: white;" href="tuvan.html">👤Tư vấn</a>
+            <a style="color: white;" href="index.html">❤️ Trang chủ</a>
+            <a style="color: white;" href="sp.html">🛒 Sản phẩm</a>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div style="color: white;" class="menu-item" onclick="toggleMenu('submenu1', this)">
+            Danh Mục
+            <span class="toggle-btn">▼</span>
+        </div>
+        <ul id="submenu1" class="submenu">
+            <li style="color: white;" class="menu-item" onclick="toggleMenu('submenu-monno', this)">
+                Món No
+                <span class="toggle-btn">▼</span>
+            </li>
+            <ul id="submenu-monno" class="submenu">
+                <li style="color: white;">Cơm chiên dương châu</li>
+                <li style="color: white;">Cơm chiên hải sản</li>
+                <li style="color: white;">Mì xào hải sản/ bò</li>
+                <li style="color: white;">Lẩu thái / hải sản / bò</li>
+            </ul>
+
+            <li style="color: white;" class="menu-item" onclick="toggleMenu('submenu-haisan', this)">
+                Hải Sản
+                <span class="toggle-btn">▼</span>
+            </li>
+            <ul id="submenu-haisan" class="submenu">
+                <li style="color: white;">Ốc các loại</li>
+                <li style="color: white;">Sò nướng phô mai</li>
+                <li style="color: white;">Tôm nướng muối ớt</li>
+                <li style="color: white;">Ghẹ rang me</li>
+            </ul>
+
+            <li style="color: white;" class="menu-item" onclick="toggleMenu('submenu-banhtrang', this)">
+                Bánh Tráng
+                <span class="toggle-btn">▼</span>
+            </li>
+            <ul id="submenu-banhtrang" class="submenu">
+                <li style="color: white;">Bánh tráng trộn</li>
+                <li style="color: white;">Bánh tráng nướng</li>
+                <li style="color: white;">Bánh tráng hến</li>
+                <li style="color: white;">Bánh tráng mỡ hành</li>
+            </ul>
+
+            <li style="color: white;" class="menu-item" onclick="toggleMenu('submenu-trangmieng', this)">
+                Tráng Miệng
+                <span class="toggle-btn">▼</span>
+            </li>
+            <ul id="submenu-trangmieng" class="submenu">
+                <li style="color: white;">Chè bưởi</li>
+                <li style="color: white;">Bánh flan</li>
+                <li style="color: white;">Trái cây dầm</li>
+            </ul>
+
+            <li style="color: white;" class="menu-item" onclick="toggleMenu('submenu-douong', this)">
+                Đồ Uống
+                <span class="toggle-btn">▼</span>
+            </li>
+            <ul id="submenu-douong" class="submenu">
+                <li style="color: white;">Nước ngọt các loại</li>
+                <li style="color: white;">Trà trái cây các loại</li>
+                <li style="color: white;">Trà tắc</li>
+                <li style="color: white;">Trà sữa</li>
+                <li style="color: white;">Dừa</li>
+            </ul>
+        </ul>
+    </div>
+    <div class="content">
+        <iframe src="sp1.html" ></iframe>
+    </div>
+    <script>
+        function toggleMenu(id, element) {
+            let submenu = document.getElementById(id);
+            let icon = element.querySelector(".toggle-btn");
+
+            if (submenu.classList.contains("active")) {
+                submenu.classList.remove("active");
+                icon.classList.remove("rotate");
+            } else {
+                submenu.classList.add("active");
+                icon.classList.add("rotate");
+            }
+        }
+    </script>
+</body>
+
+</html>
